@@ -1,4 +1,4 @@
-# Constant Pointer
+# Const Pointer
 
 <ul>
     <li>const int *p</li>
