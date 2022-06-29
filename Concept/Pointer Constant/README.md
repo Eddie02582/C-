@@ -46,7 +46,7 @@ const 修試p,p為const,但是p*可以改變
 
 
 
-## const int *const p = &i;
+## const int *const p
 p and *p都為const
 
 ```c++
