@@ -47,6 +47,12 @@ int *p1 宣告p1是指標變數,其值為ival的address<br>
     int *p1 = &ival;
     int **p2 = &p1; //p2存的是p1指標的位置即是&p1
 ```
+
+p2 為p1的位置 => *p2 其實就是 p1<br>
+*p1 就是 ival     =>**p2 就是 ival<br>
+
+
+
 <table>
     <thead>
         <tr>
@@ -88,6 +94,7 @@ int *p1 宣告p1是指標變數,其值為ival的address<br>
         </tr>        
     </tbody> 
 </table>
+
 
 
 
