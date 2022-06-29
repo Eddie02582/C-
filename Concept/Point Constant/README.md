@@ -22,14 +22,53 @@ const 修試int *p為常量,所以*p為const,但是p可以改變
 ```
             
 ## int const *p     
-   一樣const 修試*p,*p為const,但是p可以改變,所以const int * 等於 int const *
+const 修試*p,*p為const,但是p可以改變,所以const int * 等於 int const *
    
 ```c++
     const int  a= 42;
     int const*p = &a; // we can change p; const is low-level,can not change *p 
     int b = 5;
     p = &b ;
-    *p = 3; //not allow
+    //*p = 3; //not allow
     cout << *p << endl;
     return 0;
 ```
+
+## int *const p 
+const 修試p,p為const,但是p*可以改變
+   
+```c++
+    //const int a = 42 not allow
+    int  a= 42;
+    int *const p = &a; 
+    *p = 3; 
+```
+
+
+
+## const int *const p = &i;
+p and *p都為const
+
+```c++
+    int i = 0;
+    const int *const p = &i;
+    int c = 5;
+    //p = &c; not allow
+    //*p = 5; not allow
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
