@@ -11,7 +11,7 @@
        
 ## const int *p
 
-const ­×¸Õint *p¬°±`¶q,©Ò¥H*p¬°const,¦ı¬Op¥i¥H§ïÅÜ            
+const ä¿®è©¦int *pç‚ºå¸¸é‡,æ‰€ä»¥*pç‚ºconst,ä½†æ˜¯på¯ä»¥æ”¹è®Š            
             
 ```c++
     const int  a= 42;
@@ -22,7 +22,7 @@ const ­×¸Õint *p¬°±`¶q,©Ò¥H*p¬°const,¦ı¬Op¥i¥H§ïÅÜ
 ```
             
 ## int const *p     
-   ¤@¼Ëconst ­×¸Õ*p,*p¬°const,¦ı¬Op¥i¥H§ïÅÜ,©Ò¥Hconst int * µ¥©ó int const *
+   ä¸€æ¨£const ä¿®è©¦*p,*pç‚ºconst,ä½†æ˜¯på¯ä»¥æ”¹è®Š,æ‰€ä»¥const int * ç­‰æ–¼ int const *
    
 ```c++
     const int  a= 42;
