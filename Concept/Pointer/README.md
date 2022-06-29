@@ -45,7 +45,24 @@ int *p1 宣告p1是指標變數,其值為ival的address<br>
 ```c++
     int ival = 1024;
     int *p1 = &ival;
-    int **p2 = &p1; //p2存的是p1指標的位置即是&p1
+    int **p2 = &p1;
+    cout<< "ival   Value:" << ival  << endl;
+    cout<< "ival Address:" << &ival  << endl;
+    cout<< endl;
+    cout<< "p1     Value:" << p1  << endl;
+    cout<< "p1   Address:" << &p1  << endl;
+    
+    cout<< "*p1    Value:" << *p1  << endl;
+    cout<< "*p1  Address:" << &*p1  << endl;
+    cout<< endl;
+    cout<< "p2     Value:" << p2  << endl;
+    cout<< "p2   Address:" << &p2  << endl;
+    
+    cout<< "*p2    Value:" << *p2  << endl;
+    cout<< "*p2  Address:" << &*p2  << endl;  
+    
+    cout<< "**p2   Value:" << **p2  << endl;
+    cout<< "**p2 Address:" << &**p2  << endl; 
 ```
 
 p2 為p1的位置 => *p2 其實就是 p1<br>

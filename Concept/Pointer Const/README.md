@@ -58,6 +58,19 @@ p and *p都為const
 ```
 
 
+## int constexpr  *q / constexpr int *q
+q is a constant pointer to the const int i
+
+```c++
+    int i = 0;
+    constexpr int  *q = nullptr;
+    *q = 5;
+    //p = &i; not allow
+   
+```
+
+
+
 
 
 
