@@ -7,8 +7,7 @@
     <thead>
         <tr>
             <th></th>
-            <th>describe</th>
-            <th>address</th>
+            <th>describe</th>        
         </tr>
     </thead>
     <tbody>
