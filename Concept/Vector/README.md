@@ -28,7 +28,7 @@
         </tr>  
         </tr> 
             <th>vector<T> v5 (v2)</th>
-            <th>copy v2 element to v4</th>        
+            <th>copy v2 element to v5</th>        
         </tr> 
         </tr> 
             <th>vector<T> v6 = v2</th>
