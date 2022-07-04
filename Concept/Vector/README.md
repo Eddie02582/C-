@@ -41,46 +41,83 @@
     vector<int> v1;
     vector<int> v2 {1,2,3,4,5};
     vector<int> v3 ={1,2,3,4,5};
-    vector<int> v4(10,0);
+    vector<int> v4(10,0); // equal vector<int> v4(10)
     vector<int> v5(v2);
     vector<int> v6 = v2;
 ```
 
-## operator +
+## operator 
 
-### Adding Two strings
+<a href = "https://m.cplusplus.com/reference/vector/vector/cend/">vector</a>
 
-```c++
-    string s1 = "hello", s2 = "world"; 
-    string s3 = s1 + s2;
-    s1 += s2;  
-    string s5 = s1.append(s2);     // use append add string
-```
- 
-### Adding Literals and strings 
-When we mix strings and string or character literals, at least one operand to each + operator must be a string type
-,以下範例s5,s6為錯誤
+### insert
 
 ```c++
-    string s1 = "hello", s2 = "world"; 
-    string s3 = s1 + ", " + s2 + '\n';
-    string s4 = s1 + ", ";     
-    string s5 = "hello" + ", ";        // error: no string operand  
-    string s6 = s1 + ", " + "world";
-    string s7 = "hello" + ", " + s2;   // error: can't add string literals    
-    string s8 = s1.append("123");     // use append add string
-```
-可以將s5修改為
-```c++
-    string s5 = string("hello") + ", ";// ok:adding a string and a literal
-    string s5 = "hello" + string(", ");// ok:adding a string and a literal
-```
-將s7修改為
-```c++
-    string s9 = "hello" + (", " + s2); //adding a literal and a string 
+    vector<int> myvector (3,100); //{100,100,100}
+    vector<int>::iterator it;
+    
+    it = myvector.begin();
+    it = myvector.insert ( it , 200 );//add 200 {200,100,100,100}    
+    myvector.insert (it,2,300);//add two 300 {300,300,200,100,100,100} 
+
+    it = myvector.begin();    
+    std::vector<int> anothervector (2,400);
+    myvector.insert (it+2,anothervector.begin(),anothervector.end()); // 在it+2前面差入 =>{300,300,400,400,200,100,100,100}
+
 ```
 
 
+## copy vector
+
+### initial
+
+```c++
+    vector<int> vect1{1, 2, 3, 4};
+    vector<int> vect2 = vect1;
+    vector<int> vect3(vect1);
+    vector<int> vect4(begin(vect1) ,end(vect1));
+    vector<int> vect5(&vect1[0],&vect1[0] + vect1.size());
+```
+
+### normal
+
+```c++
+    vector<int> vect1{1, 2, 3, 4};
+    
+    vector<int> vect2 ;
+    vect2 = vect1;
+    
+    vector<int> vect3 ;
+    vect3.insert(begin(vect3),begin(vect1),end(vect1));
+    
+    vector<int> vect4;	
+	vect4.assign(begin(vect1) ,end(vect1));    
+    
+```
+
+
+
+## copy arr to vector
+
+```c++
+    int arr [] = {1,2,3};
+	int n = sizeof(arr) / sizeof(arr[0]);
+    
+    vector<int> vect1 (arr ,arr + n);	
+    
+    vector<int> vect2;	
+	vect2.insert(vect2.begin(),arr ,arr + n);
+    
+    vector<int> vect3;	
+	vect3.assign(arr ,arr + n);
+
+
+    vector<int> vect4;
+	for (int i = 0; i < n; i++){
+		v.push_back(arr[i]);
+	} 
+    
+```
 
 
 
