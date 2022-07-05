@@ -111,7 +111,6 @@
     vector<int> vect3;	
 	vect3.assign(arr ,arr + n);
 
-
     vector<int> vect4;
 	for (int i = 0; i < n; i++){
 		v.push_back(arr[i]);
