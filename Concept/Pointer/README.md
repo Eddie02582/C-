@@ -112,6 +112,24 @@ p2 為p1的位置 => *p2 其實就是 p1<br>
     </tbody> 
 </table>
 
+## *&arr[0] vs *&arr
+
+&arr[0]是一個指標指向arr[0],*&arr[0]在arr[0]取値
+&arr是一個指標指向arr ,arr 跟&arr 都是儲存&arr[0]位置
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
