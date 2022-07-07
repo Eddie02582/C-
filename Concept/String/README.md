@@ -51,6 +51,23 @@ When we mix strings and string or character literals, at least one operand to ea
 
 
 
+## for loop
 
-
-
+```c++
+    vector<int> v = {1,2,3,4,5};
+    
+    
+    for(auto &n :v)
+        cout << n << " ";
+    cout<<endl;
+    
+    for(auto it = v.begin();it != v.end();it++)
+        cout << *it << " ";
+    cout<<endl; 
+    
+    for(int i = 0;i < v.size();i++)
+        cout << v[i] << " ";
+    cout<<endl; 
+    
+    return 0;
+```
