@@ -115,20 +115,68 @@ p2 為p1的位置 => *p2 其實就是 p1<br>
 ## *&arr[0] vs *&arr
 
 &arr[0]是一個指標指向arr[0],*&arr[0] = arr[0]<br>
-&arr是一個指標指向arr ,arr 跟&arr 都是儲存&arr[0]位置,*&arr = arr = &arr 
+&arr是一個指標指向arr ,arr 表示陣列arr[0]的位置,&arr表示整個陣列的位置
+
+### sizeof
+```c++
+int arr[5] = {1,2,3,4};
+cout << sizeof(arr) <<endl; //20 (4*5)
+cout << sizeof(&arr) <<endl; //8
+```
+### &
+
+```c++
+int arr[5] = {1,2,3,4};
+cout << arr + 1 <<endl;
+cout << &arr + 1 <<endl; //equal(arr + 4) + 1
+cout << (arr + 4) + 1<<endl;
+```
 
 
 
+## (*p)[n] vs *p[n]
 
+### (*p)[n]
+pointer to an array of ten ints,所以n必須跟arr個數一樣,p是存整個arr位置(&arr),即p = &arr,*p = arr,操作就跟array 一樣
 
+```c++
+int arr[5] = {5,4,3,2,1};
+int (*p)[5] = &arr; 
 
+//get address 
 
+cout << *p  <<endl;      //arr   
+cout << *p + 1 <<endl;   //arr + 1
 
+cout << p[0] <<endl;    //&arr[0](&*p[0])
+cout << p[1] <<endl;    //&arr[1](&*p[1])
 
+//get value
 
+cout << (*p)[0] <<endl;    //arr[0]
+cout << (*p)[1] <<endl;    //arr[1]
 
+cout << **p <<endl;          //*arr
+cout << *(*p + 1) <<endl;    //*(arr + 1)
 
+return 0;
 
+```
+
+### *p[n] 
+
+*p[n]就是有n個指標的陣列
+
+```c++
+    int arr[5] = {1,2,3,4,5};
+    int *p [5] ; //5 pointers
+    p[0] = arr;
+    p[1] = arr + 1;
+    p[2] = &arr[3];
+    cout << *p[0] <<endl;   //arr[0]
+    cout << *p[1] <<endl;  //*(arr + 1)*/
+    cout << *p[2] <<endl; //arr[3]
+```
 
 
 
