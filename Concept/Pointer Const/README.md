@@ -11,7 +11,7 @@
        
 ## const int *p
 
-const 修試int *p為常量,所以*p為const,但是p可以改變            
+const 修試int *p 為常量,所以 *p 為const,但是p可以改變            
             
 ```c++
     const int  a= 42;
